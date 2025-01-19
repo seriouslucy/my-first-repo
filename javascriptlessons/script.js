@@ -20,12 +20,12 @@ const tax = 0.07;
 const total = price + price * tax;
 console.log(`Total price: $${total.toFixed(2)}`);
 
-let name = document.getElementById("name");
+let name = document.getElementById("myName").name;
 let output = document.getElementById("output");
 
-function greet(name) {
-
-    alert('Hello' + name + '!');
+function display() {
+    var x = document.getElementById("myName").name;
+    alert('Hello');
 }
 
 console.log(2 + 3);
