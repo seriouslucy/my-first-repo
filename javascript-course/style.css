@@ -1,0 +1,10 @@
+body {
+    background-color: lightyellow;
+    text-align: center; 
+}
+
+.clickme {
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+}
