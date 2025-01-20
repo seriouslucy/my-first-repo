@@ -4,25 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
-
-    <form>
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname">
-        <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname">
-      </form>
+    <div id="nameGet">
+    <input placeholder="Enter your first name" id="first-name"> 
+    <input placeholder="Enter your last name" id="last-name"> 
+    <button onclick="nameGet()">Click Me</button> 
+    </div>
 
     <form>
         <label for="name">Name:</label>
-        <input type="text" id="myName" name="name" placeholder="Enter your name!">
-        
-        <label for="colour">Favourite colour:</label>
-        <input type="text" id="colour" name="colour" placeholder="Enter your favourite colour!">
-        
-        <input type="submit" value="Submit" onclick="display()">
+        <input type="text" id="input" name="name" placeholder="Enter your name!">
+
+        <label for="colour">Colour:</label>
+        <input type="text" id="colour" placeholder="Enter your favourite colour!">
+
+            <button id="button">Submit</button>
+                    <p id="greet"></p>
+
     </form>
+
+    <script>
+
+        let price = 120;
+        let discountRate = 0.15;
+        let taxRate = 0.1;
+
+        let discount = price * discountRate;
+        let discountPrice = price - discount;
+        let tax = discountPrice * taxRate;
+        let finalPrice = discountPrice + tax;
+        console.log(finalPrice);
+    
+        let inventory = 100;
+        inventory -= 5;
+        inventory += 20;
+        console.log(inventory);
+
+        function nameGet() {
+
+         const 
+         firstName = document.getElementById("first-name").value,
+         lastName = document.getElementById("last-name").value;
+          
+        alert(`So your full name is ${firstName} ${lastName}`);
+        }
+
+        let input = document.getElementById("input");
+        let button = document.getElementById("button");
+        let greet = document.getElementById("greet");
+
+        button.addEventListener("click", greetingUser);
+
+        function greetingUser(event) {
+            event.preventDefault();
+            greet.textContent = `Hello, ${input.value}!`
+        }
+
+    </script>
+
+    <img src="images/cateatCORNNOW.gif">
 </body>
 </html>
